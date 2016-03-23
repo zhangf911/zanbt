@@ -1,7 +1,7 @@
 
 import React from 'react';
 import ReactDOM from 'react-dom';
-import Content from "./content.js";
+import Content from "./content.jsx";
 
 class MyApp {
     run() {
