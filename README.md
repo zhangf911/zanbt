@@ -79,30 +79,47 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import Content from "./content.jsx";
 
-class MyApp {
-    run() {
-        let mountNode = document.getElementById('app-content');
-        ReactDOM.render(<Content />, mountNode);
+class MyApp extends React.Component {
+    constructor() {
+        super();
+        this.state = {text: "tony"};
+    }
+
+    onChange(e) {
+        this.setState({text: e.target.value});
+    }
+
+    render() {
+        return (
+            <div>
+                <Content text={this.state.text} />
+                <form>
+                    <input onChange={this.onChange.bind(this)} value={this.state.text} />
+                </form>
+            </div>
+        );
     }
 }
 
-let myapp = new MyApp();
-myapp.run();
+let mountNode = document.getElementById("app-content");
+ReactDOM.render(<MyApp />, mountNode);
 ```
 
-添加源代码文件 `APP_ROOT_DIR/src/Content.jsx`, 内容如下：
+记得修改 `APP_ROOT_DIR/package.json` 文件，将其中的 `"main": "index.js"` 改为 `"main": "src/index.jsx"`。
+
+添加源代码文件 `APP_ROOT_DIR/src/content.jsx`，内容如下：
 
 ```javascript
 import React from 'react';
 
 export default class Content extends React.Component {
     render() {
-        return <h1>hello world</h1>;
+        return (
+            <h1>hello {this.props.text}</h1>
+        );
     }
 }
 ```
-
-记得修改 `APP_ROOT_DIR/package.json` 文件，将其中的 `"main": "index.js"` 改为 `"main": "src/index.jsx"`。
 
 在 `APP_ROOT_DIR` 中创建文件 `webpack.config.js`，内容如下：
 
@@ -144,6 +161,4 @@ module.exports = {
 ```
 
 然后在浏览器中访问 [http://localhost:8080/webpack-dev-server/](http://localhost:8080/webpack-dev-server/) 即可看到执行结果。
-
-
 
