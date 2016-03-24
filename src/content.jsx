@@ -3,6 +3,8 @@ import React from 'react';
 
 export default class Content extends React.Component {
     render() {
-        return <h1>hello world</h1>;
+        return (
+            <h1>hello {this.props.text}</h1>
+        );
     }
 }
