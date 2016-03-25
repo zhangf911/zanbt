@@ -21,6 +21,10 @@ export default class CardView extends React.Component {
         this.state.content = state.text;
     }
 
+    onTagsChange(state) {
+        this.state.tags = state.text;
+    }
+
     render() {
         let card = this.props.card;
 
@@ -38,7 +42,11 @@ export default class CardView extends React.Component {
                                   text={card.content}/>
                 </div>
                 <div className="meta">
-                    <EditableText textTag="li" wrapTag="ul" isArray={true} text={card.tags}/>
+                    <EditableText onChange={this.onTagsChange.bind(this)}
+                                  isArray={true}
+                                  textTag="li"
+                                  wrapTag="ul"
+                                  text={card.tags}/>
                 </div>
             </div>
         );
