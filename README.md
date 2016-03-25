@@ -152,6 +152,7 @@ module.exports = {
 };
 ```
 
+
 ### 在浏览器中测试
 
 执行命令：
@@ -161,4 +162,9 @@ module.exports = {
 ```
 
 然后在浏览器中访问 [http://localhost:8080/webpack-dev-server/](http://localhost:8080/webpack-dev-server/) 即可看到执行结果。
+
+
+### 一些坑
+
+React 如果用 ES5 写法,基本上不会有问题.但使用 ES6 写法,会存在一些坑,需要注意..
 

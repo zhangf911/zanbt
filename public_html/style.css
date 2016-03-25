@@ -1,0 +1,91 @@
+
+.cardview {
+    float: left;
+    margin: 20px;
+    padding: 0;
+    width: 320px;
+    border: 1px solid #ccc;
+    font-size: 14px;
+}
+
+.cardview .title {
+    height: 32px;
+    background-color: #ccc;
+    text-align: center;
+    overflow: hidden;
+}
+
+.cardview .title h2,
+.cardview .title input {
+    height: 24px;
+    line-height: 24px;
+    margin: 0;
+    padding: 4px 8px;
+    width: 304px;
+    border: none;
+    text-align: center;
+    font-size: 18px;
+    font-weight: bold;
+    font-family: Menlo, Monaco, monospace;
+}
+
+.cardview .content {
+    width: 320px;
+    height: 230px;
+    overflow: hidden;
+}
+
+.cardview .content pre,
+.cardview .content textarea {
+    margin: 0;
+    padding: 8px;
+    background-color: #eee;
+    width: 304px;
+    height: 214px;
+    border: none;
+    resize: none;
+    font-size: 14px;
+    font-weight: normal;
+    font-family: Menlo, Monaco, monospace;
+}
+
+.cardview .content textarea {
+    background-color: #fff;
+}
+
+.cardview .meta {
+    height: 32px;
+    overflow: hidden;
+    background-color: #ddd;
+    font-size: 14px;
+    color: #666;
+}
+
+.cardview .meta ul,
+.cardview .meta li {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.cardview .meta ul {
+    margin-top: 6px;
+}
+
+.cardview .meta li {
+    float: left;
+    height: 16px;
+    margin-left: 8px;
+    padding: 2px 4px;
+    background-color: #666;
+    color: #fff;
+    border-radius: 4px;
+}
+
+.cardview .meta li:first-child {
+    margin-left: 2px;
+}
+
+.cardlist {
+    border: 1px solid blue;
+}
