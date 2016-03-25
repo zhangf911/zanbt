@@ -11,6 +11,14 @@ python -m SimpleHTTPServer
 然后打开浏览器，访问 [http://localhost:8000/examples/](http://localhost:8000/examples/) 既可以运行各种示例。
 
 
+
+## 示例的实际效果
+
+![](screenshot.gif)
+
+示例源代码在仓库中，本文后面部分是快速入门。
+
+
 ## 创建自己的 React 应用
 
 首先安装 NodeJS: [https://nodejs.org/](https://nodejs.org/) 。
@@ -162,9 +170,4 @@ module.exports = {
 ```
 
 然后在浏览器中访问 [http://localhost:8080/webpack-dev-server/](http://localhost:8080/webpack-dev-server/) 即可看到执行结果。
-
-
-### 一些坑
-
-React 如果用 ES5 写法,基本上不会有问题.但使用 ES6 写法,会存在一些坑,需要注意..
 

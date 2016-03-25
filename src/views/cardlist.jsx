@@ -9,7 +9,12 @@ export default class CardList extends React.Component {
             {
                 title: "Hello",
                 content: "<see>\n\n\nhttps://github.com/dualface/zanbt",
-                tags: ["work", "high"]
+                tags: ["fun", "private"]
+            },
+            {
+                title: "quick-cocos2d-x",
+                content: "<see>\n\n\nhttps://github.com/dualface/quick-cocos2d-x",
+                tags: ["work", "public"]
             }
         ]};
     }

@@ -47,6 +47,11 @@
     font-size: 14px;
     font-weight: normal;
     font-family: Menlo, Monaco, monospace;
+    white-space: pre-wrap;       /* CSS 3 */
+    white-space: -moz-pre-wrap;  /* Mozilla, since 1999 */
+    white-space: -pre-wrap;      /* Opera 4-6 */
+    white-space: -o-pre-wrap;    /* Opera 7 */
+    word-wrap: break-word;
 }
 
 .cardview .content textarea {
@@ -57,8 +62,6 @@
     height: 32px;
     overflow: hidden;
     background-color: #ddd;
-    font-size: 14px;
-    color: #666;
 }
 
 .cardview .meta ul,
@@ -68,8 +71,25 @@
     padding: 0;
 }
 
+.cardview .meta ul,
+.cardview .meta input {
+    font-size: 14px;
+    font-weight: normal;
+    font-family: Menlo, Monaco, monospace;
+    border: none;
+    margin: 6px 0 0 0;
+    display: block;
+}
+
 .cardview .meta ul {
-    margin-top: 6px;
+    width: 320px;
+    height: 20px;
+}
+
+.cardview .meta input {
+    padding: 2px 4px;
+    width: 312px;
+    height: 16px;
 }
 
 .cardview .meta li {
@@ -78,6 +98,9 @@
     margin-left: 8px;
     padding: 2px 4px;
     background-color: #666;
+    font-size: 14px;
+    font-weight: normal;
+    font-family: Menlo, Monaco, monospace;
     color: #fff;
     border-radius: 4px;
 }
@@ -85,6 +108,7 @@
 .cardview .meta li:first-child {
     margin-left: 2px;
 }
+
 
 .cardlist {
     border: 1px solid blue;

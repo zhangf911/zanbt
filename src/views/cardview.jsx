@@ -23,29 +23,22 @@ export default class CardView extends React.Component {
 
     render() {
         let card = this.props.card;
-        let tags = card.tags;
-        if (!Array.isArray(tags)) {
-            tags = [];
-        }
-        tags = tags.join(", ");
 
         return (
             <div className="cardview">
                 <div className="title">
                     <EditableText onChange={this.onTitleChange.bind(this)}
-                                  tag="h2"
+                                  textTag="h2"
                                   text={card.title}/>
                 </div>
                 <div className="content">
                     <EditableText onChange={this.onContentChange.bind(this)}
-                                  multilines={true}
-                                  tag="pre"
+                                  isMultiLines={true}
+                                  textTag="pre"
                                   text={card.content}/>
                 </div>
                 <div className="meta">
-                    <ul>
-                        <EditableText tag="li" split="," text={tags}/>
-                    </ul>
+                    <EditableText textTag="li" wrapTag="ul" isArray={true} text={card.tags}/>
                 </div>
             </div>
         );
