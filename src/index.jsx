@@ -1,7 +1,7 @@
 
 import React from 'react';
 import ReactDOM from 'react-dom';
-import CardList from "./views/cardlist.jsx";
+import CardList from './components/cardlist.jsx';
 
 class MyApp extends React.Component {
     constructor() {

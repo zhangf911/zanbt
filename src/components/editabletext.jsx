@@ -14,6 +14,7 @@ export default class EditableText extends React.Component {
 
         let text = event.target.value;
         if (this.isArray) {
+            // split string to array
             let items = [];
             text.split(",").forEach(function(str) {
                 str = str.trim();
@@ -23,7 +24,7 @@ export default class EditableText extends React.Component {
             });
             text = items;
         }
-        
+
         this.setState({text: text});
         if (this.props.onChange) {
             this.props.onChange(this.state);
